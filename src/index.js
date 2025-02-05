@@ -13,8 +13,8 @@ const createWindow = () => {
     resizable: false,
     fullscreen: false,
     fullscreenable: false,
-    frame: true,  // Включаем стандартную панель
-    titleBarStyle: "hiddenInset",
+    frame: false,
+    titleBarStyle: "hidden",
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
       contextIsolation: true,
