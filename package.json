@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
+    "dist": "electron-builder",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
@@ -13,23 +14,33 @@
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.6.1",
-    "@electron-forge/maker-deb": "^7.6.1",
-    "@electron-forge/maker-rpm": "^7.6.1",
-    "@electron-forge/maker-squirrel": "^7.6.1",
-    "@electron-forge/maker-zip": "^7.6.1",
     "@electron-forge/plugin-auto-unpack-natives": "^7.6.1",
     "@electron-forge/plugin-fuses": "^7.6.1",
     "@electron/fuses": "^1.8.0",
     "electron": "^34.0.2",
+    "electron-builder": "^25.1.8",
     "electron-reload": "^2.0.0-alpha.1"
-  },
-  "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
   },
   "keywords": [],
   "author": {
     "name": "Elena Sidanova",
     "email": "l.sidan@gmx.de"
+  },
+  "build": {
+    "appId": "com.sidan.egg-timer",
+    "productName": "Egg Timer",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "icon_rLZ_icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "npmRebuild": false
   },
   "license": "MIT"
 }

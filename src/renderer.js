@@ -13,7 +13,7 @@ function showEggSelection() {
       <h2>Select the type of egg:</h2>
       <div class="egg-selection">
           <div class="egg-row">
-              <div class="egg" data-time="30">
+              <div class="egg" data-time="360">
                   <img src="assets/egg_runny.svg" alt="Runny Yolk">
                   <p>Runny yolk<br><small>6 min</small></p>
               </div>
