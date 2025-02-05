@@ -1,8 +1,16 @@
-require("electron-reload")(__dirname);
-
 const { app, BrowserWindow, ipcMain } = require("electron");
-const path = require(
-"path");
+const path = require("path");
+
+// 🔥 Отключаем electron-reload в собранной версии
+if (!app.isPackaged) {
+  try {
+    require("electron-reload")(__dirname, {
+      electron: require(`${__dirname}/node_modules/electron`),
+    });
+  } catch (e) {
+    console.log("Electron Reload не загружен в production");
+  }
+}
 
 let mainWindow;
 
