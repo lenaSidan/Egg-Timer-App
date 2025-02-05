@@ -82,7 +82,7 @@ function startTimer(time) {
   stopButton.style.display = "none";
   content.appendChild(stopButton);
 
-  // Кнопка "Restart" (значок)
+  // Кнопка "Restart"
   const restartButton = document.createElement("img");
   restartButton.id = "restart-btn";
   restartButton.src = "assets/restart.svg"; 

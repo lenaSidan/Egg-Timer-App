@@ -1,7 +1,7 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 
-// 🔥 Отключаем electron-reload в собранной версии
+
 if (!app.isPackaged) {
   try {
     require("electron-reload")(__dirname, {
